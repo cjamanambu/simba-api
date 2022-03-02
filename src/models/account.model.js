@@ -2,8 +2,6 @@ import { uuid } from 'uuidv4';
 import Sequelize from 'sequelize';
 import { sequelize } from '../database';
 
-// module.exports = (sequelize, DataTypes) => {};
-
 const AccountModel = sequelize.define(
   'Account',
   {
@@ -41,5 +39,4 @@ const AccountModel = sequelize.define(
 AccountModel.associate = () => {
   // associations can be defined here
 };
-// return Account;
 export default AccountModel;

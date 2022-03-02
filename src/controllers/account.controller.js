@@ -10,7 +10,7 @@ class AccountController {
       if (allAccounts.length > 0) {
         util.setSuccess(200, 'Accounts retrieved', allAccounts);
       } else {
-        util.setSuccess(200, 'No book found');
+        util.setSuccess(200, 'No accounts found');
       }
       return util.send(res);
     } catch (error) {

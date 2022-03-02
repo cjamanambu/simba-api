@@ -15,12 +15,13 @@ const PORT = process.env.PORT || 7000;
 
 app.use('/api/v1/account', accountRoute);
 
-app.get('*', (req, res) =>
+app.get('*', (req, res) => {
   res.status(200).send({
-    message: 'Welcome to this API.',
-  })
-);
+    message: 'Welcome to the SimbaWise API.',
+  });
+});
 
 app.listen(PORT, () => {
+  // eslint-disable-next-line no-console
   console.log(`server listen at port ${PORT}`);
 });

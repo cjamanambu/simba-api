@@ -1,7 +1,8 @@
 // import database from '../models';
-import AccountModel from '../models/account.model';
 import Sequelize from 'sequelize';
-const Op = Sequelize.Op;
+import AccountModel from '../models/account.model';
+
+const { Op } = Sequelize;
 
 class AccountService {
   static async getAllAccounts() {
