@@ -9,7 +9,8 @@ dotenv.config();
 
 app.use(morgan('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
 
 const PORT = process.env.PORT || 7000;
 
@@ -23,5 +24,5 @@ app.get('*', (req, res) => {
 
 app.listen(PORT, () => {
   // eslint-disable-next-line no-console
-  console.log(`server listen at port ${PORT}`);
+  console.log(`server listening at port ${PORT}`);
 });

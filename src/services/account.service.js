@@ -20,6 +20,18 @@ class AccountService {
       throw error;
     }
   }
+
+  static async getAccount(param) {
+    try {
+      return await AccountModel.findOne({
+        where: {
+          [Op.or]: [{ email: param }, { username: param }],
+        },
+      });
+    } catch (error) {
+      throw error;
+    }
+  }
 }
 
 export default AccountService;
